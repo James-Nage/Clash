@@ -8,9 +8,10 @@ DOMAIN,ns.itunes.apple.com
 DOMAIN,swscan.apple.com
 DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,ocsp.apple.com
-DOMAIN,xp.itunes-apple.com.akadns.net
+DOMAIN,bpapi.apple.com
+DOMAIN,gdmf.apple.com
 DOMAIN,itunes-cdn-cn.itunes-apple.com.akadns.net
-DOMAIN-KEYWORD,akadns.net
+DOMAIN,xp.itunes-apple.com.akadns.net
 #微信
 DOMAIN,dldir1.qq.com
 DOMAIN,dldir2.qq.com
