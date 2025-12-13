@@ -4,6 +4,9 @@
 # 内容：Emby 🎬 影视专线
 # 比较全面的各家 Emby 地址，同时也新增了自己需要的几条线路，把pub1.emby.wtf域名下20年-25年用过的IP全部包含添加了一遍，不知道行不行。
 payload:
+#音乐服务
+DOMAIN,diaojinping.de
+#emby影视
 DOMAIN-SUFFIX,hongxingyunmovie.vip
 DOMAIN-SUFFIX,yhemby.top
 DOMAIN-SUFFIX,feiyue.lol
