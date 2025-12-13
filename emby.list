@@ -5,7 +5,7 @@
 # 新增了自己需要的几条线路。
 payload:
 #音乐服务
-DOMAIN,diaojinping.de
+DOMAIN,music.28.al
 #emby影视
 DOMAIN-SUFFIX,hongxingyunmovie.vip
 DOMAIN-SUFFIX,yhemby.top
