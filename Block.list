@@ -1,5 +1,5 @@
-# 以下为个人需要，主要用于禁止苹果TV更新和PS更新。
-
+# 以下为个人需要，主要用于禁止苹果TV 微信 PS更新。
+#苹果
 DOMAIN,mesu.apple.com
 DOMAIN,appldnld.apple.com
 DOMAIN,gdmf.apple.com
@@ -8,6 +8,11 @@ DOMAIN,ns.itunes.apple.com
 DOMAIN,swscan.apple.com
 DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,ocsp.apple.com
+#微信
+DOMAIN,dldir1.qq.com
+DOMAIN,dldir2.qq.com
+DOMAIN,update.wechat.com
+#PS
 DOMAIN,world-gen.g.aaplimg.com
 DOMAIN-SUFFIX,adobe.com
 DOMAIN-SUFFIX,adobedtm.com
@@ -15,7 +20,7 @@ DOMAIN-SUFFIX,adobe.io
 DOMAIN-SUFFIX,omtrdc.net
 
 # 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用（2025-12-14）
-# 以下拦截采集这个地址：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+# 以下拦截采集地址：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 # 广告关键词
 
 DOMAIN-KEYWORD,admarvel
