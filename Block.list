@@ -10,6 +10,7 @@ DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,ocsp.apple.com
 DOMAIN,xp.itunes-apple.com.akadns.net
 DOMAIN,itunes-cdn-cn.itunes-apple.com.akadns.net
+DOMAIN-KEYWORD,akadns.net
 #微信
 DOMAIN,dldir1.qq.com
 DOMAIN,dldir2.qq.com
