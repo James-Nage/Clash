@@ -4,7 +4,6 @@
 
 ;1.设置规则标志位
 ruleset=🎬 影视专线,https://raw.githubusercontent.com/James-Nage/Clash/refs/heads/main/emby.list
-ruleset=🚀 翻墙机场,https://raw.githubusercontent.com/James-Nage/Clash/refs/heads/main/emby.list
 ruleset=📘 GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/James-Nage/Clash/refs/heads/main/zhilian.list
