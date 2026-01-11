@@ -26,6 +26,16 @@ proxy-providers:
       interval: 300
     proxy: 直连 
     
+  翻墙机场:
+    url: "订阅地址"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连     
+    
 
 
 proxies:
@@ -277,13 +287,13 @@ proxy-groups:
   - name: 其他-手动
     type: select
     include-all: true
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|California|Korea|Singapore|Tokyo|HongKong)).)*$"
+    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩)).)*$"
   - name: 其他-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|California|Korea|Singapore|Tokyo|HongKong)).)*$"
+    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩)).)*$"
 
 # ========================
 # 规则引擎（rules）
