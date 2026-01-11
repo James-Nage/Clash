@@ -6,7 +6,7 @@
 
 proxy-providers:
 
-  KTM机场:
+  KTM 机场:
     url: "订阅地址"
     type: http
     interval: 86400
@@ -15,7 +15,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连 
-
+    
   红杏机场:
     url: "订阅地址"
     type: http
@@ -25,6 +25,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连 
+    
 
 
 proxies:
@@ -66,44 +67,13 @@ dns:
     - +.lan
     - +.local
     - geosite:cn
-# 快猫    
-    - +.km688.ink
-# 火烧 
-    - +.onesubv.site
-    - +.oneyyds.online
-    - +.fengyyds.site
-    - +.onemg.top    
-# 猫耳 
-    - +.chybinc.com
-# BestVPN 
-    - +.invitevp.com
-    - +.vp2.us
-# 小牛
-    - +.xiaoniuyun.cc  
-# 硅谷
-    - +.apple-bing.sbs  
-# 无界
-    - +.bncrcloud.com
-# 冰云
-    - +.xby01.xyz
-# 牛逼   
-    - +.idsduf.com  
-    - +.66jc.top
-# 极速通        
-    - +.gfw.gg
-# 萌狗       
-    - +.moedog.cloud
+# 机场    
+    - +.翻墙机场.com
+    - +.hongxingyun.club
+    - +.ktmgroup-host.com
+    - +.ktmcloud.net
+    - +.ktm.ooo
 
-# 其他     
-    - +.ynhtbank.com
-    - +.qeayr.cn
-    - +.saojc.xyz   
-    - +.sssyun.xyz
-    - +.dler.cloud
-    - +.0tk8a3a1q4t94dler.com    
-    - +.aerianas.top
-    - +.gptacg.top
-    - +.wxda.net
 
 ipv6: true
 
@@ -138,7 +108,7 @@ default: &default
     - 台湾-故转
     - 日本-故转
     - 新加坡-故转
-    - 韩国-故转
+    - 影视-故转
     - 美国-故转
     - 其他-故转
     - 拒绝
@@ -231,13 +201,13 @@ proxy-groups:
   - name: 日本-手动
     type: select
     include-all: true
-    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|Tokyo|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
   - name: 日本-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|Tokyo|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
 
   # 新加坡组
   - name: 新加坡-故转
@@ -259,23 +229,23 @@ proxy-groups:
     filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
 
   # 韩国组
-  - name: 韩国-故转
+  - name: 影视-故转
     type: fallback
     interval: 300
     lazy: false
     proxies:
-      - 韩国-手动
-      - 韩国-自动
-  - name: 韩国-手动
+      - 影视-手动
+      - 影视-自动
+  - name: 影视-手动
     type: select
     include-all: true
-    filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
-  - name: 韩国-自动
+    filter: "(?=.*(HK|SG|TW|JP|0.5)).*$"
+  - name: 影视-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
+    filter: "(?=.*(HK|SG|TW|JP|USA|0.5)).*$"
 
   # 美国组
   - name: 美国-故转
@@ -288,13 +258,13 @@ proxy-groups:
   - name: 美国-手动
     type: select
     include-all: true
-    filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
+    filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|California|United States)).*$"
   - name: 美国-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
+    filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|California|United States)).*$"
 
   # 其他组
   - name: 其他-故转
@@ -307,13 +277,13 @@ proxy-groups:
   - name: 其他-手动
     type: select
     include-all: true
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩)).)*$"
+    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|California|Korea|Singapore|Tokyo|HongKong)).)*$"
   - name: 其他-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩)).)*$"
+    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|California|Korea|Singapore|Tokyo|HongKong)).)*$"
 
 # ========================
 # 规则引擎（rules）
@@ -401,7 +371,7 @@ rule-providers:
   Nintend / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list"}
   Proxy / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list"}
   Globe / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list"} 
-  Block / Domain: {<<: *class, url: "https://raw.githubusercontent.com/James-Nage/Clash/refs/heads/main/Block.list"}
+  Block / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list"}
   Nvidia / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list"}
   Crunchyroll / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list"}
   Reddit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs"}
