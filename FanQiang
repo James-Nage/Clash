@@ -1,10 +1,11 @@
 [custom]
-;保留：油管、GitHub、国内、国外、全球直连、漏网之鱼
-;节点：香港、日本、美国、韩国、狮城、其他节点、手动切换、自动选择
+;保留：油管、GitHub、电报消息、国内、国外、全球直连、漏网之鱼
+;节点：香港、日本、美国、韩国、狮城节点、手动切换、自动选择（已删除其他节点）
 
 ;1.规则集
 ruleset=📘 GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
 ruleset=📹 油管视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=📲 电报消息,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 ruleset=🌏 国内媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
 ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
@@ -13,19 +14,24 @@ ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/mast
 ruleset=🎯 全球直连,GEOIP,CN
 ruleset=🐟 漏网之鱼,FINAL
 
-;2.分组
-custom_proxy_group=📹 油管视频`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]🍍 其他节点`[]♻️ 自动选择`[]🚀 手动切换
-custom_proxy_group=📘 GitHub`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]🍍 其他节点`[]♻️ 自动选择`[]🚀 手动切换
-custom_proxy_group=🌍 国外媒体`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]🍍 其他节点`[]♻️ 自动选择`[]🚀 手动切换
-custom_proxy_group=🐟 漏网之鱼`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]🍍 其他节点`[]♻️ 自动选择`[]🚀 手动切换
+;2.分组（已移除所有「🍍 其他节点」选项）
+custom_proxy_group=📲 电报消息`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]♻️ 自动选择`[]🚀 手动切换
+custom_proxy_group=📹 油管视频`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]♻️ 自动选择`[]🚀 手动切换
+custom_proxy_group=📘 GitHub`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]♻️ 自动选择`[]🚀 手动切换
+custom_proxy_group=🌍 国外媒体`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]♻️ 自动选择`[]🚀 手动切换
+custom_proxy_group=🐟 漏网之鱼`select`[]🇭🇰 香港节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🇰🇷 韩国节点`[]🇸🇬 狮城节点`[]♻️ 自动选择`[]🚀 手动切换
+
 custom_proxy_group=🌏 国内媒体`select`[]🎯 全球直连
 custom_proxy_group=🎯 全球直连`select`[]DIRECT
+
+;各地区节点测速分组（仅保留指定地区，删除其他节点分组）
 custom_proxy_group=🇭🇰 香港节点`url-test`(HongKong)`http://www.gstatic.com/generate_204` 60 150
 custom_proxy_group=🇯🇵 日本节点`url-test`(Tokyo)`http://www.gstatic.com/generate_204` 60 150
 custom_proxy_group=🇺🇲 美国节点`url-test`(California)`http://www.gstatic.com/generate_204` 60 150
 custom_proxy_group=🇰🇷 韩国节点`url-test`(Incheon)`http://www.gstatic.com/generate_204` 60 150
 custom_proxy_group=🇸🇬 狮城节点`url-test`(Singapore)`http://www.gstatic.com/generate_204` 60 150
-custom_proxy_group=🍍 其他节点`url-test`^(?!.*(直连|拒绝|HongKong|Tokyo|California|Singapore|Incheon))`http://www.gstatic.com/generate_204` 60 150
+
+;辅助分组
 custom_proxy_group=🚀 手动切换`select`.*
 custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/generate_204` 60 150
 custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
