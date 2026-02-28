@@ -60,7 +60,6 @@ custom_proxy_group=🇺🇲 美国节点`url-test`(California)`http://www.gstati
 custom_proxy_group=🇸🇬 狮城节点`url-test`(Singapore)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=🇰🇷 韩国节点`url-test`(Incheon)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=🍍 其他节点`url-test`^(?!.*(直连|拒绝|HongKong|Tokyo|California|Singapore|Incheon))`http://www.gstatic.com/generate_204`60,150
-custom_proxy_group=🚀 翻墙机场`url-test`(Sin|Tokyo|Calif|HongKong)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=📺 巴哈姆特`select`[]🎯 全球直连
 custom_proxy_group=📺 哔哩哔哩`select`[]🎯 全球直连
 custom_proxy_group=🍎 苹果服务`select`[]🎯 全球直连
