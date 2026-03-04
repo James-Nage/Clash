@@ -1,0 +1,27 @@
+- DOMAIN-SUFFIX,qiyunle.com,国内
+- DOMAIN-SUFFIX,txffp.com,国内
+- DOMAIN-SUFFIX,txrui.cc,国内
+- DOMAIN-SUFFIX,txrui.top,国内
+- DOMAIN-SUFFIX,ccccltd.cn,国内
+- DOMAIN-SUFFIX,zdz.plus,国内
+
+##苹果
+- DOMAIN,mesu.apple.com,Block
+- DOMAIN,appldnld.apple.com,Block
+- DOMAIN,gdmf.apple.com,Block
+- DOMAIN,xp.apple.com,Block
+- DOMAIN,ns.itunes.apple.com,Block
+- DOMAIN,swscan.apple.com,Block
+- DOMAIN,ocsp.int-x3.letsencrypt.org,Block
+- DOMAIN,ocsp.apple.com,Block
+- DOMAIN,bpapi.apple.com,Block
+- DOMAIN,gdmf.apple.com,Block
+- DOMAIN,itunes-cdn-cn.itunes-apple.com.akadns.net,Block
+- DOMAIN,xp.itunes-apple.com.akadns.net,Block
+##微信
+- DOMAIN,dldir1.qq.com,Block
+- DOMAIN,dldir2.qq.com,Block
+- DOMAIN,update.wechat.com,Block
+##影视分流
+- DOMAIN-SUFFIX,hongxingyunmovie.vip,新加坡-自动
+- DOMAIN-SUFFIX,xxlb.net,美国-自动
