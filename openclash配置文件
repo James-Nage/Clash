@@ -7,7 +7,7 @@
 proxy-providers:
 
   KTM 机场:
-    url: "订阅地址"
+    url: "/"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
     
   红杏机场:
-    url: "订阅地址"
+    url: "/"
     type: http
     interval: 86400
     health-check:
@@ -27,15 +27,14 @@ proxy-providers:
     proxy: 直连 
     
   翻墙机场:
-    url: "订阅地址"
+    url: "/"
     type: http
     interval: 86400
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    proxy: 直连     
-    
+    proxy: 直连        
 
 
 proxies:
@@ -114,13 +113,20 @@ default: &default
     - 直连
     - 所有-手动
     - 所有-自动
+    - 香港-自动
     - 香港-故转
+    - 台湾-自动
     - 台湾-故转
+    - 日本-自动
     - 日本-故转
+    - 新加坡-自动   
     - 新加坡-故转
     - 影视-故转
+    - 影视-自动
     - 美国-故转
+    - 美国-自动
     - 其他-故转
+    - 其他-自动
     - 拒绝
 
 proxy-groups:
@@ -249,13 +255,13 @@ proxy-groups:
   - name: 影视-手动
     type: select
     include-all: true
-    filter: "(?=.*(HK|SG|TW|JP|0.5)).*$"
+    filter: "(?=.*(香|新|台|日|0.5)).*$"
   - name: 影视-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(HK|SG|TW|JP|USA|0.5)).*$"
+    filter: "(?=.*(HK|Hong|SG|Si|TW|JP|USA|AU|0.5)).*$"
 
   # 美国组
   - name: 美国-故转
@@ -287,13 +293,13 @@ proxy-groups:
   - name: 其他-手动
     type: select
     include-all: true
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩)).)*$"
+    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|Hong|To|Si|Ca|In)).)*$"
   - name: 其他-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩)).)*$"
+    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|Hong|To|Si|Ca|In)).)*$"
 
 # ========================
 # 规则引擎（rules）
