@@ -269,7 +269,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(Hong|Singapore|Tokyo|Incheon|California|0.5|HK|JP|TW|SG|USA)).*$"
+    filter: "(?=.*(0.5|HK|JP|TW|SG|USA)).*$"
     
   - name: 影视-自动
     type: url-test
@@ -291,7 +291,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(California|USA|美国)).*$"
+    filter: "(?=.*(USA|美国直连)).*$"
     
   - name: 美国-自动
     type: url-test
