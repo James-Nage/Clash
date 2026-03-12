@@ -7,6 +7,7 @@ payload:
 #音乐服务
 DOMAIN,music.28.al
 #emby影视
+DOMAIN-SUFFIX,xxlb.net
 DOMAIN-SUFFIX,hongxingyunmovie.vip
 DOMAIN-SUFFIX,yhemby.top
 DOMAIN-SUFFIX,feiyue.lol
