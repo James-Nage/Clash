@@ -111,24 +111,17 @@ profile:
 default: &default
   type: select
   proxies:
-    - 直连
     - 所有-手动
     - 所有-自动
-    - 香港-自动
     - 香港-故转
-    - 台湾-自动
     - 台湾-故转
-    - 日本-自动
     - 日本-故转
-    - 新加坡-自动   
     - 新加坡-故转
     - 影视-故转
-    - 影视-自动
     - 美国-故转
-    - 美国-自动
     - 其他-故转
-    - 其他-自动
     - 拒绝
+    - 直连
 
 proxy-groups:
 
@@ -198,6 +191,7 @@ proxy-groups:
     proxies:
       - 台湾-手动
       - 台湾-自动
+      
   - name: 台湾-手动
     type: url-test
     include-all: true
@@ -220,6 +214,7 @@ proxy-groups:
     proxies:
       - 日本-手动
       - 日本-自动
+      
   - name: 日本-手动
     type: url-test
     include-all: true
@@ -242,6 +237,7 @@ proxy-groups:
     proxies:
       - 新加坡-手动
       - 新加坡-自动
+      
   - name: 新加坡-手动
     type: url-test
     include-all: true
@@ -264,6 +260,7 @@ proxy-groups:
     proxies:
       - 影视-手动
       - 影视-自动
+      
   - name: 影视-手动
     type: url-test
     include-all: true
@@ -286,6 +283,7 @@ proxy-groups:
     proxies:
       - 美国-手动
       - 美国-自动
+      
   - name: 美国-手动
     type: url-test
     include-all: true
@@ -308,12 +306,13 @@ proxy-groups:
     proxies:
       - 其他-手动
       - 其他-自动
+      
   - name: 其他-手动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(流量|套餐|距离|IN|VN|AU|DE|UK|法国|DE|CA)).*$"
+    filter: "(?=.*(IN|VN|AU|DE|UK|法国|DE|CA)).*$"
     
   - name: 其他-自动
     type: url-test
@@ -326,7 +325,6 @@ proxy-groups:
 # 规则引擎（rules）
 # ========================
 rules:
-
   - RULE-SET,Block / Domain,Block  
   - RULE-SET,ChatGPT / Domain,ChatGPT
   - RULE-SET,Meta AI / Domain,Meta AI
@@ -370,7 +368,6 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
-  Block / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list"}
   Block / Domain: {<<: *class, url: "https://raw.githubusercontent.com/James-Nage/Clash/refs/heads/main/Block.list"}
   TEST / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list"}
   ChatGPT / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
