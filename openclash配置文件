@@ -7,7 +7,7 @@
 proxy-providers:
 
   KTM 机场:
-    url: "https://"
+    url: "https://ktm.nnmmn.cn/api/v1/client/subscribe?token=e67a8239956627c653d65aafcb5afde3"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
 
   翻墙机场:
-    url: "https://
+    url: "https://www10th.ga-sub.cfd/api/v1/client/subscribe?token=be7993fad8b21dc4649fe53d67c5611f"
     type: http
     interval: 86400
     health-check:
@@ -27,7 +27,7 @@ proxy-providers:
     proxy: 直连 
     
   红杏机场:
-    url: "https://"
+    url: "https://43.139.248.121:9000/hxyunvip?token=1482ce0733338eab0cfa31af5f3fe8bf"
     type: http
     interval: 86400
     health-check:
