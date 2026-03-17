@@ -7,7 +7,7 @@
 proxy-providers:
 
   KTM 机场:
-    url: "/"
+    url: "https://"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
 
   翻墙机场:
-    url: "/"
+    url: "https://
     type: http
     interval: 86400
     health-check:
@@ -27,7 +27,7 @@ proxy-providers:
     proxy: 直连 
     
   红杏机场:
-    url: "/"
+    url: "https://"
     type: http
     interval: 86400
     health-check:
@@ -273,7 +273,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(直连|韩国|IEPL)).*$"
+    filter: "(?=.*(香港直连|日本直连|美国直连|新加坡直连|台湾直连|韩国|IEPL|Hong|Inch|Sin)).*$"
 
   # 美国组
   - name: 美国-故转
