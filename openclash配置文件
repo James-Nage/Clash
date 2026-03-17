@@ -1,5 +1,5 @@
 # ========================
-# Clash-ALL 优化配置【2026-03-14】
+# Clash-ALL 优化配置
 # ========================
 
 # 机场节点订阅
@@ -7,7 +7,7 @@
 proxy-providers:
 
   KTM 机场:
-    url: "/3"
+    url: "/"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
 
   翻墙机场:
-    url: "ht/1f"
+    url: "/"
     type: http
     interval: 86400
     health-check:
@@ -27,7 +27,7 @@ proxy-providers:
     proxy: 直连 
     
   红杏机场:
-    url: "/8bf"
+    url: "/"
     type: http
     interval: 86400
     health-check:
@@ -174,14 +174,14 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(HongKong|HK)).*$"
+    filter: "(?=.*(HK)).*$"
     
   - name: 香港-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
+    filter: "(?=.*(HongKong|香港IEPL|香港直连)).*$"
  
   # 台湾组
   - name: 台湾-故转
@@ -204,7 +204,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
+    filter: "(?=.*(台湾直连|台湾IEPL)).*$"
 
   # 日本组
   - name: 日本-故转
@@ -220,14 +220,14 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(JP|Tokyo)).*$"
+    filter: "(?=.*(JP)).*$"
     
   - name: 日本-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|Tokyo|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+    filter: "(?=.*(Tokyo|日本直连|日本IEPL)).*$"
 
   # 新加坡组
   - name: 新加坡-故转
@@ -243,14 +243,14 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(Singapore|SG)).*$"
+    filter: "(?=.*(SG)).*$"
     
   - name: 新加坡-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
+    filter: "(?=.*(Singapore|新加坡IEPL|新加坡直连)).*$"
 
   # 影视组
   - name: 影视-故转
@@ -266,14 +266,14 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(HK|TW|SG|USA)).*$"
+    filter: "(?=.*(HK|TW|SG|USA|JP|DE|AU|VN)).*$"
     
   - name: 影视-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(0.5)).*$"
+    filter: "(?=.*(直连|韩国|IEPL)).*$"
 
   # 美国组
   - name: 美国-故转
@@ -289,14 +289,14 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(USA|美国直连)).*$"
+    filter: "(?=.*(USA)).*$"
     
   - name: 美国-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|California|United States)).*$"
+    filter: "(?=.*(California|美国IEPL|美国直连)).*$"
 
   # 其他组
   - name: 其他-故转
