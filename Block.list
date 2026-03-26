@@ -1,4 +1,8 @@
 # 以下为个人需要，主要用于禁止苹果TV 微信 PS更新。
+
+# 拦截恶意追踪域名
+DOMAIN,gtm1.ktmwan.net,拒绝
+DOMAIN-SUFFIX,ffzy-online.com,拒绝 
 #苹果
 DOMAIN,mesu.apple.com
 DOMAIN,appldnld.apple.com
