@@ -29,7 +29,7 @@ DOMAIN-SUFFIX,omtrdc.net
 # 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用（2026-04-14）
 # 以下拦截采集地址：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 # 广告关键词
-DOMAIN-SUFFIX,ryplay11.com
+DOMAIN-KEYWORD,ryplay
 DOMAIN-KEYWORD,admarvel
 DOMAIN-KEYWORD,admaster
 DOMAIN-KEYWORD,adsage
