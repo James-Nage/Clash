@@ -7,17 +7,7 @@
 proxy-providers:
 
   KTM 机场:
-    url: "https://"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连 
-
-  翻墙机场:
-    url: "https:/"
+    url: "、"
     type: http
     interval: 86400
     health-check:
@@ -26,8 +16,8 @@ proxy-providers:
       interval: 300
     proxy: 直连 
     
-  红杏机场:
-    url: "https://"
+  良心云机场:
+    url: "、"
     type: http
     interval: 86400
     health-check:
@@ -35,8 +25,6 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连 
-
-
 
 proxies:
   - {name: 直连, type: direct}
@@ -181,7 +169,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(HongKong|香港IEPL|香港直连)).*$"
+    filter: "(?=.*(香港高速|香港专线)).*$"
  
   # 台湾组
   - name: 台湾-故转
@@ -204,7 +192,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(台湾直连|台湾IEPL)).*$"
+    filter: "(?=.*(台湾高速|台湾专线)).*$"
 
   # 日本组
   - name: 日本-故转
@@ -227,7 +215,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(Tokyo|日本直连|日本IEPL)).*$"
+    filter: "(?=.*(日本高速|日本专线)).*$"
 
   # 新加坡组
   - name: 新加坡-故转
@@ -250,7 +238,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(Singapore|新加坡IEPL|新加坡直连)).*$"
+    filter: "(?=.*(新加坡高速|新加坡专线)).*$"
 
   # 影视组
   - name: 影视-故转
@@ -266,14 +254,14 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(HK|TW|SG|USA|JP|DE|AU|VN)).*$"
+    filter: "(?=.*(SG|HK|VN|IN|AU|DE|USA|UK|FR|DE|CA)).*$"
     
   - name: 影视-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(香港直连|日本直连|美国直连|新加坡直连|台湾直连|韩国|IEPL|Hong|Inch|Sin)).*$"
+    filter: "(?=.*(新加坡高速|新加坡专线|台湾高速|台湾专线|韩国专线|韩国高速|香港高速|香港专线|美国高速|美国专线|美国0)).*$"
 
   # 美国组
   - name: 美国-故转
@@ -296,7 +284,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(California|美国IEPL|美国直连)).*$"
+    filter: "(?=.*(美国高速|美国专线)).*$"
 
   # 其他组
   - name: 其他-故转
@@ -312,20 +300,38 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "(?=.*(IN|VN|AU|DE|UK|法国|DE|CA)).*$"
+    filter: "(?=.*(AU|IN|DE|UK|法国|CA|VN|FR)).*$"
     
   - name: 其他-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|香|新|日|台|美|韩|Hong|To|Si|Ca|In)).)*$"
+    filter: "^((?!(直连|拒绝|香港|日本|台湾|美国|韩国|新加坡)).)*$"
 
 # ========================
 # 规则引擎（rules）
 # ========================
 rules:
-  - RULE-SET,Block / Domain,Block  
+  - RULE-SET,Block / Domain,Block
+  - DOMAIN-KEYWORD,qiyunle,国内
+  - DOMAIN-KEYWORD,ryplay,Block
+  - DOMAIN-KEYWORD,caoni,Block
+  - DOMAIN-KEYWORD,txffp,国内
+  - DOMAIN-KEYWORD,txrui,国内
+  - DOMAIN-KEYWORD,ccccltd,国内
+  - DOMAIN-KEYWORD,zdz,国内
+  - DOMAIN-SUFFIX,npmmirror.com,国内
+  - DOMAIN,api.ipify.org,其他-故转
+  # NTP 直连
+  - DST-PORT,123,直连 #匹配数据目标端口(直连)
+  - SRC-PORT,123,直连 #匹配数据源端口(直连)
+##影视分流
+  - DOMAIN-KEYWORD,hongxingyunmovie,新加坡-自动
+  - DOMAIN-KEYWORD,xxlb,影视-故转
+  - DOMAIN-KEYWORD,xyz,影视-故转
+  - DOMAIN,jsdelivr.net,国外
+  
   - RULE-SET,ChatGPT / Domain,ChatGPT
   - RULE-SET,Meta AI / Domain,Meta AI
   - RULE-SET,Emby / Domain,Emby
