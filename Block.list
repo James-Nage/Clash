@@ -30,6 +30,7 @@ DOMAIN-SUFFIX,omtrdc.net
 # 以下拦截采集地址：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 # 广告关键词
 DOMAIN-KEYWORD,ryplay
+DOMAIN-KEYWORD,caoni
 DOMAIN-KEYWORD,admarvel
 DOMAIN-KEYWORD,admaster
 DOMAIN-KEYWORD,adsage
