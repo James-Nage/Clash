@@ -1,15 +1,14 @@
 # 类别: Emby
 # 参考数据: https://github.com/justdoiting/emby-rules
-# 维护日期D: 【2026-04-14】
+# 维护日期D: 【2026-05-11】
 # 内容：Emby 🎬 影视专线
 # 新增了自己需要的几条线路。
 payload:
-#emby影视
-DOMAIN,emby.wenjian.de
-DOMAIN-KEYWORD,xyz
-DOMAIN-KEYWORD,hongxingyun
-DOMAIN-SUFFIX,term.wtf
-DOMAIN-KEYWORD,xxlb
-DOMAIN-KEYWORD,feiyue
-DOMAIN-KEYWORD,emby
-DOMAIN-KEYWORD,jmsooo
+  - DOMAIN,emby.wenjian.de
+  - DOMAIN-KEYWORD,xyz
+  - DOMAIN-KEYWORD,hongxingyun
+  - DOMAIN-SUFFIX,term.wtf
+  - DOMAIN-KEYWORD,xxlb
+  - DOMAIN-KEYWORD,feiyue
+  - DOMAIN-KEYWORD,emby
+  - DOMAIN-KEYWORD,jmsooo
