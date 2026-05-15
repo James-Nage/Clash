@@ -5,7 +5,7 @@
 # 新增了自己需要的几条线路。
 payload:
 DOMAIN-KEYWORD,xyz
-DOMAIN,m.wenjian.de
+# DOMAIN,m.wenjian.de
 DOMAIN-KEYWORD,hongxingyun
 DOMAIN-SUFFIX,term.wtf
 DOMAIN-KEYWORD,xxlb
