@@ -5,7 +5,6 @@
 # 新增了自己需要的几条线路。
 payload:
 DOMAIN-KEYWORD,xyz
-DOMAIN-KEYWORD,wenjian
 DOMAIN-KEYWORD,hongxingyun
 DOMAIN-KEYWORD,xxlb
 DOMAIN-KEYWORD,feiyue
