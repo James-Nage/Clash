@@ -4,6 +4,7 @@
 # 内容：Emby 🎬 影视专线
 # 新增了自己需要的几条线路。
 payload:
+DOMAIN,wenjian.de
 DOMAIN-KEYWORD,xyz
 DOMAIN-KEYWORD,hongxingyun
 DOMAIN-KEYWORD,xxlb
