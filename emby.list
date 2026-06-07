@@ -15,11 +15,13 @@
 # GEOSITE,category-public-tracker,DIRECT #匹配GEOSITE数据库规则(直连)
 # DOMAIN-REGEX,^abc.*com,PROXY #正则匹配域名
 # RULE-SET,providername,PROXY #匹配规则集
+# 终点站禁【国内 香港 日本 美国】
+# 飞跃站禁【日本 】
+# 稳健站禁【暂时不清楚，建议cloudflare优先ip】
 payload:
 DOMAIN-KEYWORD,xyz
+DOMAIN-KEYWORD,emby
+DOMAIN-KEYWORD,feiyue
+DOMAIN-KEYWORD,wenjian
 DOMAIN-KEYWORD,hongxingyun
 DOMAIN-KEYWORD,xxlb
-DOMAIN-KEYWORD,feiyue
-DOMAIN-KEYWORD,emby
-DOMAIN-KEYWORD,zdz
-DOMAIN-KEYWORD,wenjian
