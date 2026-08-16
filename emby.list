@@ -20,7 +20,7 @@
 # 稳健站禁【暂时不清楚】         推荐【美国】
 # 红杏云禁【暂时不清楚】         推荐【新加坡】
 payload:
-DOMAIN-KEYWORD,emby
-DOMAIN-KEYWORD,feiyue
-DOMAIN,m.wenjian.de
-DOMAIN-KEYWORD,hongxingyun
+DOMAIN-KEYWORD,emby,新加坡-故转
+DOMAIN-KEYWORD,feiyue,日本-故转
+DOMAIN,m.wenjian.de,美国-故转
+DOMAIN-KEYWORD,hongxingyun,新加坡-故转
